@@ -41,16 +41,29 @@ img {
   max-width: 100%; /* Ensure media elements are responsive */
 }
 
+button {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: var(--desaturated-blue);
+}
+
 body {
   min-height: 100vh;
   background-color: var(--very-dark-blue);
   color: var(--white);
   font-family: "Rubik", sans-serif;
   font-size: 1.125rem;
+  padding: 0 24px;
   letter-spacing: 0px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 24px;
 }
 
 .user-report {
@@ -95,12 +108,93 @@ body {
   padding: 24px 0 25px;
 }
 
-button {
-  font: inherit;
-  background-color: transparent;
-  color: var(--desaturated-blue);
-  border: none;
+.activity-tracker {
+  overflow: hidden;
+  border-radius: 15px;
+  min-width: 327px;
 }
+
+.activity-tracker:is(.work) {
+  background-color: var(--light-red-work);
+}
+
+.activity-tracker:is(.play) {
+  background-color: var(--soft-blue-play);
+}
+
+.activity-tracker:is(.study) {
+  background-color: var(--light-red-study);
+}
+
+.activity-tracker:is(.exercise) {
+  background-color: var(--lime-green-exercise);
+}
+
+.activity-tracker:is(.social) {
+  background-color: var(--violet-social);
+}
+
+.activity-tracker:is(.self-care) {
+  background-color: var(--soft-orange-self-care);
+}
+
+.activity-bg {
+  height: 38px;
+  display: grid;
+  place-content: start end;
+}
+
+.activity-bg > img {
+  transform: translate(-1rem, -0.7rem);
+  position: relative;
+  z-index: 1;
+}
+
+.activity-tracker:is(.play) > .activity-bg > img {
+  transform: translate(-1rem, -0.33rem);
+  position: relative;
+  z-index: 1;
+}
+
+.activity-tracker:is(.exercise) > .activity-bg > img {
+  transform: translate(-1rem, 0rem);
+  position: relative;
+  z-index: 1;
+}
+
+.activity {
+  position: relative;
+  z-index: 5;
+  padding: 28px 24px;
+  background-color: var(--dark-blue);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.activity-header,
+.activity-hours {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 71px;
+}
+
+.activity-header h2 {
+  font-size: 1.125rem;
+}
+
+.activity-hours h3 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.activity-hours p {
+  margin-top: 5px;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: var(--pale-blue);
+}
+
 /* .attribution {
     font-size: 11px;
     text-align: center;
