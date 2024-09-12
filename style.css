@@ -57,7 +57,7 @@ body {
   color: var(--white);
   font-family: "Rubik", sans-serif;
   font-size: 1.125rem;
-  padding: 0 24px;
+  padding: 81px 24px;
   letter-spacing: 0px;
   display: flex;
   flex-direction: column;
