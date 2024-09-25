@@ -112,6 +112,30 @@ body {
   padding: 20px 0;
 }
 
+.activity-work {
+  background-color: var(--light-red-work);
+}
+
+.activity-play {
+  background-color: var(--soft-blue-play);
+}
+
+.activity-study {
+  background-color: var(--light-red-study);
+}
+
+.activity-exercise {
+  background-color: var(--lime-green-exercise);
+}
+
+.activity-social {
+  background-color: var(--violet-social);
+}
+
+.activity-self-care {
+  background-color: var(--soft-orange-self-care);
+}
+
 /* .attribution {
     font-size: 11px;
     text-align: center;
