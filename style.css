@@ -55,9 +55,10 @@ body {
   color: var(--white);
   font-family: "Rubik", sans-serif;
   font-size: 1.125rem;
+  font-weight: 400;
   letter-spacing: 0px;
   line-height: normal;
-  padding: 0 24px;
+  padding: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,6 +67,9 @@ body {
 .container {
   width: 100%;
   max-width: 1110px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
 /* User Report */
@@ -110,6 +114,52 @@ body {
   align-items: center;
   gap: 40px;
   padding: 20px 0;
+}
+
+.activity-tracker {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.activity-tracked {
+  background-color: var(--dark-blue);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 28px 24px;
+  position: relative;
+}
+
+.activity,
+.activity-times {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activity h2 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.current-time {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.previous-time {
+  font-size: 0.9375rem;
+  color: var(--pale-blue);
+}
+
+.activity-icon {
+  position: relative;
+  height: 38px;
+}
+
+.icon {
+  position: absolute;
+  top: -0.8rem;
+  right: 0.8rem;
 }
 
 .activity-work {
