@@ -153,10 +153,10 @@ body {
   background-color: var(--dark-blue);
   height: 100%;
   width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-radius: 15px;
   padding: 28px 24px;
   position: relative;
+  z-index: 5;
 }
 
 .activity,
@@ -288,59 +288,11 @@ body {
   }
 }
 
-@media (min-width: 780px) {
-  .container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-  }
-  .user-report {
-    grid-column: span 1;
-    grid-row: span 3;
-  }
-
-  .user h1 {
-    font-size: 2.5rem;
-  }
-
-  .user-profile {
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    gap: 43px;
-    padding: 80px 60px 160px 32px;
-  }
-
-  .user-profile img {
-    width: 90px;
-    height: 90px;
-  }
-
-  .user-options {
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    gap: 21px;
-    padding: 40px 155px 32px 32px;
-  }
-
-  .activity-times {
-    margin-top: 24px;
-  }
-
-  .activity-tracked {
-    padding: 29px 46px 32px 30px;
-  }
-
-  .current-time {
-    font-size: 3rem;
-  }
-}
-
-@media (min-width: 1024px) {
+@media (min-width: 880px) {
   .container {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 30px;
+    gap: 24px;
   }
 
   .user-report {
@@ -349,6 +301,10 @@ body {
   }
 
   .user-profile {
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 43px;
     padding: 37px 84px 80px 32px;
   }
 
@@ -358,11 +314,19 @@ body {
   }
 
   .user-options {
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 21px;
     padding: 26px 155px 32px 32px;
   }
 
   .current-time {
     font-size: 3.5rem;
+  }
+
+  .activity-times {
+    margin-top: 24px;
   }
 
   .play-icon {
