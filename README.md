@@ -48,35 +48,32 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+I had a hard time doing this project. From getting my background images positioned correctly to figuring out how to write JavaScript to update the hours depending on which button was clicked. One of the things I learned in CSS was to use :where to add an effect when something is hovered over or is active and focused within. It is easier to use that instead of making different classes for hover, active, or focus states. In JavaScript, I learned to fetch data from a JSON file and update my content depending on what was needed.
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.btn:where(.active, :hover, :focus-within) {
+  color: var(--white);
 }
 ```
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+async function fetchDataAndUpdateCards(timeframe) {
+  try {
+    // Fetch the JSON data
+    const response = await fetch("data.json");
+    const data = await response.json();
+
+    // Update the cards based on the selected timeframe
+    updateCards(data, timeframe);
+  } catch (error) {
+    console.error("Error fetching the data:", error);
+  }
+}
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I want to keep using new CSS styles to get better at using CSS. I also want to use JavaScript more and see what I can do with JavaScript.
 
 ### Useful resources
 
