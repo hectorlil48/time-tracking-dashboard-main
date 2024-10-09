@@ -62,6 +62,7 @@ body {
   line-height: normal;
   padding: 24px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -70,7 +71,6 @@ body {
   width: 100%;
   max-width: 1110px;
   display: grid;
-  grid-template-columns: 1fr;
   gap: 24px;
 }
 
@@ -86,11 +86,9 @@ body {
   background-color: var(--blue);
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 20px;
-  padding: 35px 39px 34px 32px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  padding: 35px 32px;
+  border-radius: 0 0 15px 15px;
 }
 
 .user-profile img {
@@ -195,69 +193,59 @@ body {
   right: 1rem;
 }
 
-/* Work */
-
-.work-icon {
-  top: -0.7rem;
-}
-
+/* Specific Activity Colors */
 .activity-work {
   background-color: var(--light-red-work);
 }
-
-/* PLay */
-
-.play-icon {
-  top: -0.3rem;
-}
-
 .activity-play {
   background-color: var(--soft-blue-play);
 }
-
-/* Study */
-.study-icon {
-  top: -0.5rem;
-}
-
 .activity-study {
   background-color: var(--light-red-study);
 }
-
-/* Exercise */
-.exercise-icon {
-  top: -0.1rem;
-}
-
 .activity-exercise {
   background-color: var(--lime-green-exercise);
 }
-
-/* Social */
-.social-icon {
-  top: -0.9rem;
-}
-
 .activity-social {
   background-color: var(--violet-social);
 }
-
-/* Self Care */
-.self-care-icon {
-  top: -0.7rem;
-}
-
 .activity-self-care {
   background-color: var(--soft-orange-self-care);
 }
 
-/* .attribution {
-    font-size: 11px;
-    text-align: center;
-  }
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  } */
+/* Icon Positioning */
+.icon {
+  position: absolute;
+  right: 1rem;
+}
+
+.work-icon {
+  top: -0.7rem;
+}
+.play-icon {
+  top: -0.3rem;
+}
+.study-icon {
+  top: -0.5rem;
+}
+.exercise-icon {
+  top: -0.1rem;
+}
+.social-icon {
+  top: -0.9rem;
+}
+.self-care-icon {
+  top: -0.7rem;
+}
+
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 20px;
+}
+.attribution a {
+  color: var(--pale-blue);
+}
 
 @media (min-width: 460px) {
   .container {
