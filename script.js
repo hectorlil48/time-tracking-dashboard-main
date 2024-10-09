@@ -66,5 +66,5 @@ document
 // Load "Daily" data by default when the page loads
 window.addEventListener("DOMContentLoaded", () => {
   // Set "Daily" as the default active option
-  fetchDataAndUpdateCards("daily");
+  fetchDataAndUpdateCards("weekly");
 });
